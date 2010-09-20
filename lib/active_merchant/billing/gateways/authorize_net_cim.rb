@@ -561,6 +561,7 @@ module ActiveMerchant #:nodoc:
         xml.tag!('customerProfileId', options[:customer_profile_id])
         xml.tag!('customerPaymentProfileId', options[:customer_payment_profile_id])
         xml.tag!('customerShippingAddressId', options[:customer_address_id]) if options[:customer_address_id]
+        xml.tag!('cardCode',options[:card_code]) if options[:card_code]        
         xml.tag!('validationMode', CIM_VALIDATION_MODES[options[:validation_mode]]) if options[:validation_mode]
 
         xml.target!
